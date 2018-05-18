@@ -1,0 +1,122 @@
+///Basic Colors
+$yellow: #FFBB00;
+$yellow-darker: #F5B400;
+$blue-gray:#607D8B;
+$blue-default:#4285F4;
+$blue-darker:#3E50B4;
+$pink-funky:#EC407A;
+$black: #000;
+$black-gray:#212121;
+$black-brown:#221900;
+$brown-yellow:#705300;
+$gray:#E8E8E8;
+$gray-white-whiter:#CCCCCC;
+$gray-white:#A9A9A9;
+$gray-darker-white:#686868;
+$gray-darker:#5D5D5D;
+$gray-black:#202020;
+$white:#FFF;
+
+
+///Text - Combine Serif + Sans Serif
+$font-family: 'Roboto','Times New Roman', serif;
+$font-family-logo: 'Product Sans',Arial,sans-serif;
+$font-family-note-title: 'Roboto Condensed',arial,sans-serif;
+$font-family-note-body: 'Roboto Slab','Times New Roman',serif;
+$font-family-secondary: 'Source Sans Pro', sans-serif;
+$font-size-default: 16px;
+
+///Z-indexes:
+$z-Everest:700;
+$z-hight:600;
+$z-top:500;
+$z-medium:400;
+$z-bottom:300;
+
+///Breakpoints
+$middle-size: 768px;
+$smal-size: 420px;
+$extra-small:410px;
+$small:540px;
+$medium:800px;
+$large:960px;
+$extra-large:1140px;
+
+///Components
+
+//body
+$body-bg:$gray;
+$scroll-bar-bg:$gray;
+$scroll-bar-border: $gray-white;
+$scroll-bar-bar:$gray-darker-white;
+$scroll-bar-bar-hover:$gray-darker;
+
+//Header:
+$header-default-bg: $yellow;
+$header-default-input-bg: $yellow-darker;
+$header-default-itens:$brown-yellow;
+$header-default-itens-hover: $black-brown;
+$header-default-app-name:$black;
+
+$header-search-bg:$blue-darker;
+$header-search-itens:$white;
+$header-search-itens-hover:$white;
+$header-search-app-name:$white;
+
+$header-labels-bg: $blue-gray;
+$header-labels-itens:$white;
+$header-labels-itens-hover:$white;
+$header-labels-app-name:$white;
+
+$user-default-bg:$pink-funky;
+
+//NavBar
+$nav-bar-default-bg: $gray;
+$nav-bar-default-btn-default-hover:$gray-white-whiter;
+$nav-bar-default-icons: $gray-darker-white;
+
+$nav-bar-small-bg: $white;
+$nav-bar-small-icons: $gray-darker-white;
+$nav-bar-small-btn-default-hover:$gray;
+$nav-bar-small-btn-edit: $black-gray;
+
+//Notes:
+$note-title:$gray-darker;
+$note-title-donned:$gray-black;
+$note-body:$gray-darker;
+$note-icons:$gray-white;
+$note-icons-hover:$black-gray;
+$note-btn-labels:$gray;
+$note-btn-done:$gray-black;
+$note-icon-pin:$blue-default;
+
+//Extends
+%border {
+    border:1px solid red;
+}
+
+//CSS Variables
+/*
+:root {
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --text-header:#705300;
+
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+
+}*/
+

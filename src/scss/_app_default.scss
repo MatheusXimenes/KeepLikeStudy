@@ -1,0 +1,101 @@
+
+//App Settings
+
+//Body Settings
+body {
+    background-color: $body-bg;
+    margin:0px;
+    padding:0px;
+    font-family: $font-family;
+    font-size: $font-size-default;
+}
+
+button {
+    border:none;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+
+    &:disabled {
+        cursor: not-allowed;
+    }
+}
+
+
+ul {
+    margin:0px; 
+    padding:0px;
+    li {list-style: none;}
+}
+input[type=text], input[type=search]{
+    font-family: $font-family-secondary;
+    border:none;
+    outline: none;
+}
+
+svg {
+    width:24px !important;
+    height:24px !important;
+    use {
+        width:24px !important;
+        fill: $nav-bar-default-icons;
+    }
+}
+
+
+//ScrollBar
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: $scroll-bar-bg;
+    background-clip: content-box;   // this is important
+    border: 2px solid $scroll-bar-border;
+}
+::-webkit-scrollbar-thumb {
+    background: $scroll-bar-bar-hover;
+}
+
+//Shadows
+.default-shadow {
+    box-shadow: 0px 2px 3px 1px rgba(0, 0, 0, 0.35);
+}
+.hover-shadow {
+    box-shadow: 0px 3px 8px 4px rgba(0, 0, 0, 0.2);
+}
+
+//Flex
+.flex-row {
+    display:flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+}
+.flex-column {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+//Default States
+.hidden {
+    display: none;
+}
+.block {
+    display: block;
+}
+
+//Toltip
+.tooltip:hover:after {
+    content: attr(data-title);
+    display: inline-block;
+    padding: 5px 10px;
+    background: #000;
+    font-size: .7rem;
+    color:#fff;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -50%;
+    z-index:9999;
+    border-radius: 5px;
+}

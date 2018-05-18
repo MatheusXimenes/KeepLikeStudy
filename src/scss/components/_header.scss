@@ -1,0 +1,161 @@
+.header{
+    width:100%;
+    padding:2px;
+    position:fixed;
+    background-color: $header-default-bg;
+    font-size: 1.2rem;
+    @extend .flex-row;
+    z-index:$z-top;
+
+
+    svg.icon {
+        use {
+            fill:$header-default-itens;
+            transition: fill .5s ease;
+        }
+    }
+
+    button {
+        position: relative;
+
+        &:hover {
+            svg.icon {
+                use {
+                    fill:$header-default-itens-hover;
+                }
+            }
+    
+        }
+    }
+
+    .header__button{
+        color:#000;
+        font-weight: bold;
+        width:60px;
+        height:60px;
+        margin-left: 10px;
+        border-radius: 50%;
+        align-self: center;
+        @include transition(background-color, 0.5s, ease);
+        background-color: rgba(0, 0, 0, 0);
+
+        &:hover{
+            background-color: $yellow-darker;
+
+            @media only screen and (max-width: 1000px) {
+                background-color:transparent;
+            }
+        }
+    }
+
+    .header__logo{
+        font-family: $font-family-logo;
+        font-size: 1.3rem;
+        margin-left: 10px;
+        width:120px;
+        flex-grow: none;
+
+        @media only screen and (max-width: $medium) {
+            margin-right: auto;
+        }
+
+        span {
+            font-weight: bold;
+        }
+    }
+
+    input[type=search]{
+        margin-right: auto;
+        margin-left: 20px;
+        width:100%;
+        max-width: 800px;
+        padding:15px 15px 15px 70px;
+        font-size:1rem;
+        color: $header-default-itens;
+        background: url("../svg/search.svg") no-repeat 20px 15px;
+        background-color: $header-default-input-bg;
+        border-radius: 4px;
+        transition: background-color 0.5s ease;
+        
+        @media only screen and (max-width: $medium) {
+            display:none;
+        }
+
+        &:placeholder{
+            color: $header-default-itens;
+        }
+
+        &:focus{
+            background-color: $white;
+            border: 0px;
+            box-shadow:  0px 1px 3px #cc7606;
+            outline: none;
+            
+        }
+
+    }
+
+    .header__refresh {
+        align-self: center flex-end; 
+        margin-left: 10px;
+        text-align: center;
+        svg.icon {
+            transform: scale(.7);
+        }
+
+        @media only screen and (max-width: $small) {
+            display:none;
+        }
+        
+    }
+
+    .header__organization {
+        align-self: center flex-end;
+        margin-left: 10px;
+
+        svg.icon {
+            transform: scale(1.1);
+        }
+
+        
+    }
+    
+    .header__apps {
+        align-self: center flex-end; 
+        margin-left: 40px;
+        text-align: center;
+        svg.icon {
+            transform: scale(1);
+        }
+
+        @media only screen and (max-width: $small) {
+            margin-left: 10px;
+        }
+        
+    }
+
+    .header__notification {
+        align-self: center flex-end; 
+        margin-left: 10px;
+        text-align: center;
+        svg.icon {
+            transform: scale(1);
+        }
+
+        @media only screen and (max-width: $small) {
+            display:none;
+        }
+        
+    }
+
+    .header__user{
+        padding:5px 20px 5px 5px;
+        margin-left: 10px;
+        .header__user__img {
+            width:35px;
+            height:35px;
+            border-radius: 50%;
+        }
+        
+    }
+}

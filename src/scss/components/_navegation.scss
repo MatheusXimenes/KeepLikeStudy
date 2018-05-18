@@ -1,0 +1,103 @@
+.navegation {
+    width: 260px;
+    height: 92vh;
+    padding-top:65px;
+    overflow-y:hidden;
+    position: fixed;
+    top:0;
+    left:0;
+    border-right: 1px solid $gray-white-whiter;
+    display:flex;
+    flex-direction: column;
+    align-content: flex-start;
+    transition: left .5s ease;
+
+
+    @media only screen and (max-width: 1000px) {
+        left:-280px;
+        z-index:$z-medium;
+        background-color: $white;
+    }
+
+    ul  {
+        //flex-grow: 1;
+        border-bottom:1px solid $gray-white-whiter;
+        padding:5px 0px;
+
+        .li-noline{
+            border-bottom:0px;
+        }
+         
+        li {
+            font-family: $font-family-secondary;
+            font-size: .9rem;
+
+            button {
+                width:100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding:12px 20px;
+                color:$gray-darker-white;
+                transition: background-color 0.2s ease;
+
+                .icon {
+                    margin-right:30px;
+                }
+                
+                &:hover {
+                    background-color: $nav-bar-default-btn-default-hover;
+                }
+            }
+
+            
+        }
+
+        li.labels {
+            display: flex;
+            padding:0px;
+            margin: 0px;
+
+            h4 {
+                padding:10px 20px;
+                margin:0px;
+                margin-right: 80px;
+                font-weight: normal;
+                color:#000;
+            }
+
+            .primary {
+                align-self: center;
+                justify-content: center;
+                padding: 5px 10px;
+                font-weight: bold;
+                width:80px;
+                
+                &:hover {
+                    background-color: $white;
+                    border-radius: 3px;
+                }
+            }
+
+            
+        }
+        
+        li.labels + ul {
+            border:none;
+        }
+    }
+
+    &:hover{
+        overflow-y:auto;
+    }
+}
+
+.hidden {
+    left:0;
+    @media only screen and (min-width: 1000px) {
+        left:-280px;
+        z-index:$z-Everest;
+        background-color: $white;
+    }
+}
+

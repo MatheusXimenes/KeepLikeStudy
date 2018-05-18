@@ -1,0 +1,11 @@
+{
+    "short_name": "KeepLike",
+    "name": "Keep Like",
+    "start_url": "https://github.com/MatheusXimenes",
+    "display": "standalone",
+    "icons": [
+      { "src": "icon_16.png", "type": "image/png", "sizes": "16x16" }
+    ],
+    "background_color": "#E8E8DE",
+    "theme_color": "#ffbb00"
+  }

@@ -1,0 +1,5 @@
+.sass-cache/
+.vscode/
+assets/
+node_modules/
+package-lock.json

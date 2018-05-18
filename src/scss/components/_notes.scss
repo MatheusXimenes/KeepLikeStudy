@@ -1,0 +1,423 @@
+.container {
+    display: flex;
+
+    .notes{
+        display:block;
+        width: 100%;
+        margin:80px 0 0 270px;
+        padding:10px;
+        transition: margin .5s ease;
+        
+        @media only screen and (max-width: 1000px) {
+            margin-left: 0px;
+        }
+
+        .new-note{
+            width:480px;
+            margin: auto;
+            background-color: $white;
+            position:relative;
+            border-top:1px solid #ddd;
+            @extend .default-shadow;
+            
+            @media only screen and (max-width:550px) {
+                width:310px;
+                padding: 5px 0;
+            }
+
+            .note-pin{
+                opacity:0;
+                position:absolute;
+                top:8px;
+                right:-4px;
+                transition: opacity .2s;
+                svg.icon {
+                    use {
+                        transform: scale(.8);
+                    }
+                }
+
+                &:hover {
+                    svg.icon {
+                        use {
+                            fill: $note-icon-pin;
+                        }
+                    }
+                }
+
+            }
+
+            .note-title, .note-title:focus{
+                display: none;
+                font-family: $font-family-note-title;
+                font-weight: bold;
+                font-size: 1rem;
+                color:$note-title;
+                margin: 0 40px 10px 0;
+                padding: 15px 0 0 15px;
+                border:0;
+                outline: none;
+                resize: none;
+            }
+            
+            .note-body-list {
+                display: none;
+            }
+
+            .wrap-text-list {
+                @extend .flex-row;
+
+                .note-body-text{
+                    font-family:  $font-family-note-body;
+                    font-size: .9rem;
+                    color: $note-icons;
+                    line-height: 1.2rem;
+                    padding: 15px 15px;
+                    margin:0px;
+                    width:350px;
+                    outline: none;
+                    resize: none;
+                } 
+    
+                .note-type-list {
+                    @extend .flex-row;
+                    align-items: center;
+                    margin-right: 15px;
+                    li {
+                        margin-left:5px;
+                        button{
+                            .icon {
+                                use {
+                                    transform: scale(1.1);
+                                }
+                            }
+                            .tooltip{
+                                display:none;
+                            }
+                        }
+                    }
+
+                    
+                    li:first-child {
+                        .icon {
+                            margin-top: 6px;
+                            use {
+                                transform: scale(.8);
+                            }
+                        }
+                    }
+                }
+    
+            }
+            
+            .note-features{
+                display:none !important;
+                opacity: 0;
+                @extend .flex-row;
+                margin-top:20px;
+                transition: opacity .2s;
+                
+                li{
+                    width:50px;
+                    button{
+                        width:50px;
+                        background-color: none;
+                        .icon{
+                            use {
+                                transform: scale(.8);
+                            }     
+                        }
+                        .tooltip{
+                            display:none;
+                        }
+                    }
+
+                    button.note-finish {
+                        font-size: .75rem;
+                        font-weight: bold;
+                        color:$note-btn-done;
+                        text-align: right;   
+                        position: relative;
+                        top:-5px;
+                        right:10px;
+                    }
+
+                    &:last-child {
+                        margin-left: auto;
+                    }
+                }
+            }
+        }
+
+        .new-note--expanded{
+            .note-select {
+                display: none !important;
+                opacity: 0;
+            }
+
+            .wrap-text-list {
+                display:block !important;
+
+                .note-body-text{
+                    width:460px;
+                    padding: 0 15px;
+                }
+                .note-type-list{
+                    display: none !important;
+                }
+            }
+            .note-title{
+                display: block !important;
+            }
+            .note-pin {
+                opacity: 1;
+            }
+            .note-features{
+                display:flex !important;
+                opacity: 1;
+            }
+        }
+
+    }
+
+    
+
+    .expand {
+        margin-left:0px;
+    }
+    
+
+    .notes-position {
+        width: 330px;
+        margin: auto;
+
+        @media only screen and (min-width:550px) {
+            width: 500px;
+        }
+        
+        @media only screen and (min-width:1100px) {
+            width: 800px;
+        }
+        
+        @media only screen and (min-width:1300px) {
+            width: 800px;
+        }
+   
+        @media only screen and (min-width:1500px) {
+            width: 1000px;
+        }
+
+        @media only screen and (min-width:1700px) {
+            width: 1300px;
+        }
+        
+
+        .main-note-list, .main-note-list-others {
+
+            h3 {
+                width:100%;
+                margin-top: 30px;
+                margin-bottom: 0px;
+                padding-left: 10px;
+                color:$gray-darker-white;
+                font-family: $font-family;
+                font-size: .9rem;
+            }
+
+            ul.note-list {
+                width:100%;
+                margin: 0 auto;
+                padding: 0px;
+                
+                @include prefix(column-gap, 0);
+                @include prefix(column-width, 250px);
+                @include prefix(column-fill, auto);
+                
+                li.note {
+                    padding:10px;
+                    @include prefix(column-break-inside, avoid);
+                    position: relative;
+                    display: block;
+                    opacity: 1;
+                    transition: all 0.5s ease;
+                    
+                    .note-container {
+                        border-top:1px solid #ddd;
+                        position: relative;
+                        @extend .default-shadow;
+                        background-color: $white;
+                        transition: all .2s ease;
+
+                        .note-select{
+                            display: none;
+                            position: absolute;
+                            text-align: center;
+                            left:-10px;
+                            top:-10px;
+                            width:27px;
+                            height:27px;
+                            border-radius: 50%;
+                            background-color: #fff;
+                            //border: 1px solid #ddd;
+                            box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.5);
+                            svg.icon{
+                                position: absolute;
+                                top:6px;
+                                left:5px;
+                                use {
+                                    transform: scale(.7);
+                                }
+                            }
+                        }
+
+                        .note-pin-marked{
+                            opacity:1;
+                            position:absolute;
+                            top:8px;
+                            right:0px;
+                            svg.icon {
+                                use {
+                                    transform: scale(.8);
+                                    fill:#4285F4;
+                                }
+                            }
+                        }
+        
+                        
+                        .note-pin{
+                            opacity:0;
+                            position:absolute;
+                            top:8px;
+                            right:-4px;
+                            transition: opacity .2s;
+                            svg.icon {
+                                use {
+                                    transform: scale(.8);
+                                }
+                            }
+                        }
+        
+                        .note-title, .note-title:focus{
+                            padding: 15px 15px;
+                            font-family: $font-family-note-title;
+                            font-weight: bold;
+                            font-size: 1rem;
+                            color:$note-title;
+                            border:0px;
+                            width:80%;
+                            outline: none;
+                            resize: none;
+                        }
+                        
+                        .note-body{
+                            padding: 0px 15px;
+                            font-family: $font-family-note-body;
+                            font-size: .9rem;
+                            line-height: 1.2rem;
+                            color: $note-body;
+                            outline: none;
+                            resize: none;
+
+                            ul.note-body-list {
+                                li {
+                                    display: flex;
+                                    padding-bottom:5px;
+                                    
+                                    svg {
+                                        margin-right:10px;
+                                    }
+                                    input[type=checkbox] {
+                                        margin-right:10px;
+                                    }
+                                    span {
+
+                                    }
+                                    
+                                }
+                            }
+                        }    
+            
+                        ul.note-features{
+                            margin: 15px 7px;
+                            opacity: 0;
+                            @extend .flex-row;
+                            //justify-content: flex-end;
+                            margin-top:20px;
+                            transition: opacity .2s;
+                            
+                            li{
+                                button{
+                                    
+                                    background-color: rgba(0, 0, 0, 0);
+                                    
+                                    .icon{
+                                        use {
+                                            transform: scale(.8);
+                                        }     
+                                    }
+                                    
+                                    .tooltip{
+                                        display:none;
+                                    }
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            //border-top:1px solid $gray-white;
+                            @extend .hover-shadow;
+                            
+                            .note-pin, 
+                            .note-features
+                            {
+                                opacity: 1;
+                            }
+        
+                            .note-select {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    
+                }
+
+                .note-hidden{
+                    display: none !important;
+                }
+
+                /*@keyframes expand-note {
+                    0%  {}
+                    25%  {background-color: yellow;}
+                    50%  {background-color: blue;}
+                    100% {background-color: green;}
+                }*/
+
+                .note-container-expanded{
+
+                    width:600px !important;
+                    max-height: 80vh;
+                    background-color: $white !important;
+                    position: fixed !important;
+                    top:20%;
+                    left:35%;
+                    z-index: $z-Everest;
+
+                    /*animation-name: expand-note;
+                    animation-duration: 4s;*/
+                    
+                    .note-select{
+                        display: none !important;
+                    }
+                    .note-pin, 
+                    .note-features{
+                        opacity: 1 !important;
+                    }
+                }
+
+            
+            }
+        }
+
+    }
+}

@@ -1,0 +1,13 @@
+
+.main-footer{
+    width:100%;
+    display: none;
+    background-color: $header-default-bg;
+    position: fixed;
+    bottom:0px;
+    font-family: $font-family-logo;
+    font-size:.8rem;
+    text-align: center;
+    padding:5px 0;
+    z-index:500;
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="manifest" href="https://ssl.gstatic.com/keep/manifest.json">
+    <link href="//fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Roboto+Condensed|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="shortcut icon" href="./img/keep.ico">
+
+    <title>KeepLike App - Study Case</title>
+
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header class="header" data-js="header">
+        <button class="header__button" data-js="button-nav"><svg class="icon"><use xlink:href="./svg/all.svg#bars"/></svg></button>
+        <div class="header__logo"> <span>keep</span> Like</div>
+        <input type="search" data-js="filter" placeholder="Search..">
+
+        <button class="header__refresh tooltip" data-title="Refresh"><svg class="icon"><use xlink:href="./svg/all.svg#spinner"/></svg></button>
+        <button class="header__organization tooltip" data-title="List view"><svg class="icon"><use xlink:href="./svg/all.svg#view"/></svg></button>
+
+        <button class="header__apps tooltip" data-title="Google Apps" disabled><svg class="icon"><use xlink:href="./svg/all.svg#apps"/></svg></button>
+        <button class="header__notification tooltip" data-title="Notifications" disabled ><svg class="icon"><use xlink:href="./svg/all.svg#notification"/></svg></button>
+
+        <button class="header__user" data-js="user">
+            <img src="./img/user.jpg" class="header__user__img" alt="MattXimenes"> 
+            <div class="header__user__display"></div>
+        </button>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- DIV CONTAINER -->
+    <div class="container">
+
+        <!-- MAIN NAV -->
+        <nav class="navegation" data-js="main-navigation">
+            
+            <!-- DIVISION 1-->
+            <ul>
+                <li><button><svg class="icon"><use xlink:href="./svg/all.svg#ideia"/></svg>Notes</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#remember"/></svg>Reminders</button></li>
+            </ul>
+
+            <!-- DIVISION 2-->
+            <ul>
+                <li class="labels"><h4>Labels</h4> <button class="primary" data-js="show-modal-label"> EDIT</button></li>
+                <ul data-js="labels-list-navigation">
+
+                </ul>
+            </ul>
+
+            <!-- DIVISION 3-->
+            <ul>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#archieve"/></svg>Archieved</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#delete"/></svg>Bin</button></li>
+            </ul>
+
+            <!-- DIVISION 4-->
+            <ul>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#settings"/></svg>Settings</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#feedback"/></svg>Send FeedBack</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#help"/></svg>Help</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#devices"/></svg>App Download</button></li>
+                <li><button disabled><svg class="icon"><use xlink:href="./svg/all.svg#keyboard"/></svg>Keyboard Shortcuts</button></li>
+            </ul>
+        
+        </nav>
+        <!-- END MAIN NAV -->
+
+        <!-- MAIN -->
+        <main class="notes" data-js="main-notes">
+            
+            <!-- MAIN NOTE -->
+            <div class="new-note" data-js="new-note">
+
+                <!-- Main Note Header -->
+                <button class="note-pin"><svg class="icon"><use xlink:href="./svg/all.svg#pin"/></svg></button>
+                <div contentEditable="true" data-js="note-title" class="note-title">Title</div>
+                <div class="wrap-text-list">
+                    <div contentEditable="true" data-js="new-note-creator" data-js-type="text" class="note-body-text">Take a note...</div>
+                    <ul class="note-type-list">
+                        <li><button data-js="new-note-creator" data-js-type="list" disabled><svg class="icon"><use xlink:href="./svg/all.svg#list"/></svg><span class="tooltip">List</span></button></li>
+                        <li><button data-js="new-note-creator" data-js-type="image" disabled><svg class="icon"><use xlink:href="./svg/all.svg#image"/></svg><span class="tooltip">Image</span></button></li>
+                        <li><button data-js="new-note-creator" data-js-type="draw" disabled><svg class="icon"><use xlink:href="./svg/all.svg#pen"/></svg><span class="tooltip">text</span></button></li>
+                    </ul>
+                </div>
+                <ul data-js="note-body-list" class="note-body-list">
+                    <li><svg class="icon hidden"><use xlink:href="./svg/all.svg#archieve"/></svg><input type="checkbox" name="${element}" value="${element}"><span data-js-filter="apply">${element}<span></span></li>
+                </ul>
+                <ul class="note-features">
+                    <li><button data-js="remember" disabled><svg class="icon"><use xlink:href="./svg/all.svg#remember"/></svg><span class="tooltip">Remeber Me</span></button>
+                    <li><button data-js="share" disabled><svg class="icon"><use xlink:href="./svg/all.svg#person_add"/></svg><span class="tooltip">Share</span></button></li>
+                    <li><button data-js="addcolor" disabled><svg class="icon"><use xlink:href="./svg/all.svg#pallete"/></svg><span class="tooltip">Add Color</span></button></li>
+                    <li><button data-js="addimage" disabled><svg class="icon"><use xlink:href="./svg/all.svg#image"/></svg><span class="tooltip">Add Image</span></button></li>
+                    <li><button data-js="archieve" disabled><svg class="icon"><use xlink:href="./svg/all.svg#archieve"/></svg><span class="tooltip">Archieve</span></button></li>
+                    <li><button data-js="more" disabled><svg class="icon"><use xlink:href="./svg/all.svg#more_vert"/></svg><span class="tooltip">More</span></button></li>  
+                    <li><button data-js="button-done" class="note-finish">DONE</button></li>     
+                </ul>
+            </div>
+            <!-- END MAIN NOTE -->
+            
+            <!-- NOTES POSITION -->
+            <div class="notes-position">
+
+                <!-- LIST OF OLD NOTES -->
+                <section class="main-note-list">
+                    <h3>Pinned</h3>
+                    <ul class="note-list" data-js="note-list-marked" data-js-filter="apply-filter">
+                    <!-- Fetch Elements with JS Fetch_API -->  
+                    </ul>
+
+                </section>
+                <!-- END LIST OF OLD NOTES -->
+
+                <!-- LIST OF OLD NOTES -->
+                <section class="main-note-list-others">
+                    <h3>Others</h3>
+                    <ul class="note-list" data-js="note-list-others" data-js-filter="apply-filter">
+                        <!-- Fetch Elements with JS Fetch_API -->  
+                    </ul>
+
+                </section>
+                <!-- END LIST OF OLD NOTES -->
+            
+            </div>
+            <!-- END - NOTES POSITION -->
+
+        </main>
+        <!-- END MAIN -->
+
+
+    </div>
+    <!-- END DIV CONTAINER -->
+    
+    <div class="modal-notes-background" data-js="modal-notes-background"></div>
+    <div class="modal-others-background" data-js="modal-others-background"></div>
+    <div class="modal-others-container" data-js="modal-others">
+        <h3 class="modal-others-title" data-js="modal-others-title"></h3>
+        <div class="modal-others-body" data-js="modal-others-body">
+            
+        </div>
+        <div class="modal-others-buttons" data-js="modal-others-buttons">
+            <!-- <button type="submit">DONE</button> -->
+        </div>
+    </div>
+    
+    
+    <footer class="main-footer">
+        Hand Made by Matt Ximenes for a Study Case
+    </footer>
+    
+    <script src="./js/modules/authenticate.js"></script>
+    <script src="./js/modules/localstorage.js"></script>
+    <script src="./js/modules/fetch.js"></script>
+    <script src="./js/modules/filter.js"></script>
+    <script src="./js/modules/utilities.js"></script>
+    <script src="./js/modules/modal.js"></script>
+    <script src="./js/components/user.js"></script>
+    <script src="./js/components/header.js"></script>
+    <script src="./js/components/label.model.js"></script>
+    <script src="./js/components/label.view.js"></script>
+    <script src="./js/components/label.controller.js"></script>
+    <script src="./js/components/note.model.js"></script>
+    <script src="./js/components/note.view.js"></script>
+    <script src="./js/components/note.controller.js"></script>
+    <script src="./js/components/notelist.js"></script>
+    <script src="./js/components/navigation.js"></script>
+    <script src="./js/app.js"></script>
+    
+</body>
+</html>
