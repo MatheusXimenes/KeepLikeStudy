@@ -1,3 +1,10 @@
+/*
+    ## Header Component ##
+    v.1.0
+        - Handle with header shadow on Scroll the page;
+        
+*/
+
 const Header =  (function(){
 
         /// Event on Scroll - Header Shadow

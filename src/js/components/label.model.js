@@ -1,3 +1,11 @@
+/*
+    ## Label Component Model ##
+    v.1.0
+        - Handle with Labels Data;
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
+
 const LabelModel = (function(){
     function getLabelDataFromLocalStorage(){
         return LocalStorage.getData('app-notes-list-labels');

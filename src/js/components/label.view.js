@@ -1,3 +1,11 @@
+/*
+    ## Label Component View ##
+    v.1.0
+        - Handle with Labels render;
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
+
 const LabelView = (function(){
 
     ///Render Labels in Navigation Bar

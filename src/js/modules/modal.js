@@ -1,3 +1,13 @@
+/*
+    ## Modal Module ##
+    v.1.0
+        - Render a main modal (Labels, Settings, Keyboard shortcuts, ....)
+        - Add Events;
+        - Turn On;
+        - Turn Off;
+        - Basic Validation;
+*/
+
 const Modal = (function(){
 
     //Constants

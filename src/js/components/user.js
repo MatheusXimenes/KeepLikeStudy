@@ -1,3 +1,8 @@
+/*
+    ## User Component ##
+    v.0.0 - Not used yet.
+*/
+
 const User = (function(){
 
     function initUser($element, Data){

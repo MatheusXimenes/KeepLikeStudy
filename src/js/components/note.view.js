@@ -1,3 +1,12 @@
+/*
+    ## Note Component View ##
+    v.1.0
+        - Handle with render of an new Note and his life cycle;
+        - Handle with all note render;
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
+
 const NotesView = (function(){
     const $modalBackground = document.querySelector('[data-js="modal-notes-background"]');
     const $newNote = document.querySelector('[data-js="new-note"]');
@@ -48,6 +57,8 @@ const NotesView = (function(){
         $newNote.querySelector('[data-js="note-title"]').innerHTML = 'Title';
         $newNote.querySelector('[data-js="new-note-creator"]').innerHTML = 'Take a note...';
     }
+
+
 
     //Map All Notes and Add events
     function addEventNotes() {

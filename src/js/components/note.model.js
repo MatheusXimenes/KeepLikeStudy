@@ -1,3 +1,11 @@
+/*
+    ## Note Component Model ##
+    v.1.0
+        - Handle with data on Notes;
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
+
 const NotesModel = (function(){
 
     const listMarked = 'app-notes-list-pin';

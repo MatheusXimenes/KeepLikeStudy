@@ -1,3 +1,13 @@
+/*
+    ## Utilities Module ou Classe ##
+    v.1.0
+        - Log (Console.log) things;
+        - isEmpty;
+        - clearHTMLOfElement;
+    v.1.1
+    ....
+*/
+
 const Utilities = (function(){
 
     const log = function(item){

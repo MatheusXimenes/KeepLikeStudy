@@ -1,3 +1,14 @@
+/*
+
+    ## Fecth Data Module ##
+    Description: Fetch data from an End Point on Server;
+    Tested using a jSON File;
+
+    v.0.0 - Not used yet.
+
+
+*/
+
 const Fetch = (function(){
     
     let Listlabels;

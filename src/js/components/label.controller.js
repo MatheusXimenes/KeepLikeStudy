@@ -1,3 +1,14 @@
+/*
+    ## Label Component Controller ##
+    v.1.0
+        - Handle with Add Labels to App;
+        - Handle with Edit Labels to App;
+        - Handle with Remove Labels to App;
+
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
+
 const LabelController = (function(){
 
     function addLabel(data){

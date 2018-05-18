@@ -1,3 +1,7 @@
+/*
+    ## Init Module ##
+    Start all initial components.
+*/
 const app = (function(){
 
     //AppData

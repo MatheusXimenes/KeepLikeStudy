@@ -1,3 +1,13 @@
+/*
+    ## Local Storage Module ##
+    v.1.0
+        - Set Data on LocalStorage
+        - Remove Data on LocalStorage
+        - Get Data on LocalStorage
+    v.1.1 
+        TODO EVOLUTION (One main LocalStorage String Data per user);
+*/
+
 const LocalStorage = (function(){
 
     function setData(name, data){

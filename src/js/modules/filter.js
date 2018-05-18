@@ -1,3 +1,12 @@
+/*
+
+    ## Filter Module ## - Filter Notes Using Header Input to Search 
+    v.1.0
+        - Filters all notes with a bunch for loops;
+    v.1.1
+        TODO EVOLUTION (Change indexOf to use regExp and using array.map() API);
+*/
+
 const Filter = (function(){
 
     'use strict';

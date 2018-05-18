@@ -1,3 +1,10 @@
+/*
+    ## Navigation Component Controller ##
+    v.1.0
+        - Handle with Navigation States;
+    
+*/
+
 const Navigation =  (function(){
     
         const $mainNav = document.querySelector("[data-js=main-navigation]");

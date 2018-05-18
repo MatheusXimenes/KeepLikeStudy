@@ -1,3 +1,9 @@
+/*
+    ## Sub Pub Module ## 
+    v.1.0 - Not used yet.
+    
+*/
+
 const events = (function() {
 
     var events = {};

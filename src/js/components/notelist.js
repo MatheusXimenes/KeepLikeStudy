@@ -1,3 +1,9 @@
+/*
+    ## Notelist Component ##
+    v.1.0
+        - Rende List of Notes (Marked or not);
+*/
+
 const NotesList = (function(){
 
     const $listNotesMarked = document.querySelector('[data-js="note-list-marked"]');

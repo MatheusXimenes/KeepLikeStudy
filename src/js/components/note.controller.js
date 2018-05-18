@@ -1,5 +1,12 @@
-const NotesController = (function(){
+/*
+    ## Note Component Controller ##
+    v.1.0
+        - Handle with add, edit and remove notes;
+    v.1.1
+        TODO (Try better use of MVC Segregation);
+*/
 
+const NotesController = (function(){
 
     function addNote(...data){
 
@@ -45,10 +52,6 @@ const NotesController = (function(){
         NotesList.renderListOfNotesInit();
     }
     
-    
-    
-    //NotesControler.addNote('marked', 'text', 'Testing lenght of the title in my little box', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, sint. Natus nostrum incidunt aut ipsa sint atque, vel ullam minus pariatur, eveniet distinctio veritatis quibusdam illo esse optio placeat officiis.',["Canada", "Personal"], '',["gueroba@gmail.com"], '2018-01-01 00:00:00', '2018-01-01 00:00:00' )
-
     return {
         
         addNote: addNote,
