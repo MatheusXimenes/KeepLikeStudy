@@ -1,5 +1,5 @@
 /*
-    ## Navigation Component Controller ##
+    ## Navigation Component ##
     v.1.0
         - Handle with Navigation States;
     

@@ -216,6 +216,7 @@ svg {
     .header button:hover svg.icon use {
       fill: #221900; }
   .header .header__button {
+    flex-shrink: 0;
     color: #000;
     font-weight: bold;
     width: 60px;
@@ -228,7 +229,7 @@ svg {
     -ms-transition: background-color 0.5s ease;
     -o-transition: background-color 0.5s ease;
     transition: background-color 0.5s ease;
-    background-color: rgba(0, 0, 0, 0); }
+    background-color: transparent; }
     .header .header__button:hover {
       background-color: #F5B400; }
       @media only screen and (max-width: 1000px) {
@@ -239,7 +240,7 @@ svg {
     font-size: 1.3rem;
     margin-left: 10px;
     width: 120px;
-    flex-grow: none; }
+    flex-shrink: 0; }
     @media only screen and (max-width: 800px) {
       .header .header__logo {
         margin-right: auto; } }
@@ -533,11 +534,11 @@ svg {
       -o-column-fill: auto;
       column-fill: auto;
       /*@keyframes expand-note {
-          0%  {}
-          25%  {background-color: yellow;}
-          50%  {background-color: blue;}
-          100% {background-color: green;}
-      }*/ }
+                    0%  {}
+                    25%  {background-color: yellow;}
+                    50%  {background-color: blue;}
+                    100% {background-color: green;}
+                }*/ }
       .container .notes-position .main-note-list ul.note-list li.note, .container .notes-position .main-note-list-others ul.note-list li.note {
         padding: 10px;
         -webkit-column-break-inside: avoid;
@@ -618,7 +619,7 @@ svg {
             margin-top: 20px;
             transition: opacity .2s; }
             .container .notes-position .main-note-list ul.note-list li.note .note-container ul.note-features li button, .container .notes-position .main-note-list-others ul.note-list li.note .note-container ul.note-features li button {
-              background-color: rgba(0, 0, 0, 0); }
+              background-color: transparent; }
               .container .notes-position .main-note-list ul.note-list li.note .note-container ul.note-features li button .icon use, .container .notes-position .main-note-list-others ul.note-list li.note .note-container ul.note-features li button .icon use {
                 transform: scale(0.8); }
               .container .notes-position .main-note-list ul.note-list li.note .note-container ul.note-features li button .tooltip, .container .notes-position .main-note-list-others ul.note-list li.note .note-container ul.note-features li button .tooltip {
@@ -640,7 +641,7 @@ svg {
         left: 35%;
         z-index: 700;
         /*animation-name: expand-note;
-        animation-duration: 4s;*/ }
+                    animation-duration: 4s;*/ }
         .container .notes-position .main-note-list ul.note-list .note-container-expanded .note-select, .container .notes-position .main-note-list-others ul.note-list .note-container-expanded .note-select {
           display: none !important; }
         .container .notes-position .main-note-list ul.note-list .note-container-expanded .note-pin,
@@ -659,5 +660,3 @@ svg {
   text-align: center;
   padding: 5px 0;
   z-index: 500; }
-
-/*# sourceMappingURL=app.css.map */

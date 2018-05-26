@@ -58,7 +58,11 @@
     @include other_prefix(background, linear-gradient($direction, $from, $to));
     filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');}
 
-
+/// Box Shadow in Gerenal
+/// @param {color} $from first-color
+/// @param {color} $to second-color
+/// @param {direction} $direction top (default)
+/// Require other_css3 mixin
 @mixin box-shadow($horizontal, $vertical, $blur, $spread: '', $color: 'rgba(0,0,0,0.1)') {
     @if ($inset != "") {
         @include prefix(box-shadow, $inset $horizontal $vertical $blur $spread $color);
